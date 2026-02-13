@@ -11,7 +11,7 @@ public class numberMatrix {
 		do {
 			System.out.println("Option 1: Search Matrix.");
 			System.out.println("Option 2: Sum Even Numbers.");
-			System.out.println("Option 3: Exit.");
+			System.out.println("Option 3: Exit program.");
 			
 			System.out.print("Enter your option number 1-3: ");
 			userChoice = input.nextInt();
@@ -35,7 +35,20 @@ public class numberMatrix {
 			    	if (found == true){System.out.println("Found it!");}
 			    	else {System.out.println("Number NOT found!");}
 			    case 2:
+			    	System.out.println("You have chosen to select the sum of all even numbers!");
+			    	int userTotal = 0;
+			    	for (int[] r : matrix){
+			    		for (int c : r){
+			    			if(c % 2 == 0){userTotal += c;}
+			    		}
+			    	}
+			    	System.out.println("The total for all even numbers is " + userTotal + ".");
+			    	break;
+			    case 3:
+			    	System.out.println("Exiting...");
+			    	break;
 			    default:
+			    	System.out.println("Good Bye!");
 			    	break;
 			}
 			
